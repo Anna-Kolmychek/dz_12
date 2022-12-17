@@ -8,7 +8,7 @@
 <body>
 <main>
 
-    <a href="/" class="link">Назад</a>
+    <a href="{{ url_for('main_blueprint.main_page') }}" class="link">Назад</a>
 
     <h1>Ошибка</h1>
 
@@ -18,7 +18,7 @@
 
     <hr>
 
-    <a href="/post" class="button">Добавить пост</a>
+    <a href="{{ url_for('post_form_blueprint.post_form_page') }}" class="button">Добавить пост</a>
 
 
 </main>

@@ -7,6 +7,9 @@ main_blueprint = Blueprint('main_blueprint',
                            __name__,
                            template_folder='templates')
 
+search_blueprint = Blueprint('search_blueprint',
+                             __name__,
+                             template_folder='template')
 
 # вьшка на главную страницу (страница с поиском)
 @main_blueprint.route('/')
@@ -15,7 +18,7 @@ def main_page():
 
 
 # вьшка на страницу с результатами поиска
-@main_blueprint.route('/search')
+@search_blueprint.route('/search')
 def post_list_page():
     user_search = request.args.get('s')
     posts = load_data(PATH_TO_POSTS_JSON)
